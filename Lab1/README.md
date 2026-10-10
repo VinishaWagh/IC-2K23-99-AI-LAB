@@ -3,7 +3,7 @@
 **Course:** IC-709D | Artificial Intelligence Lab  
 **Student Name:** Vinisha Wagh  
 **Roll No:** IC-2K23-99  
-**Semester:** MCA / Integrated M.Sc.  
+**Semester:** MCA 
 **Programming Language:** Java  
 
 ---
