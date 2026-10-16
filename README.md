@@ -59,13 +59,6 @@ To compile and run Lab 1:
 # Compile
 javac Lab1/WaterJugProblem.java
 
-# Run
+# Run (interactively prompts for capacities and target)
 java -cp Lab1 WaterJugProblem
-```
-
-For custom jug sizes and target amount:
-```bash
-java -cp Lab1 WaterJugProblem <jug1_capacity> <jug2_capacity> <target_amount>
-# Example:
-java -cp Lab1 WaterJugProblem 4 3 2
 ```

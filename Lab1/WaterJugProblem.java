@@ -253,23 +253,18 @@ public class WaterJugProblem {
         System.out.println("       Name: Vinisha Wagh   |   Roll No: IC-2K23-99                               ");
         System.out.println("==================================================================================");
 
-        int jug1Cap = 4;
-        int jug2Cap = 3;
-        int target = 2;
+        Scanner scanner = new Scanner(System.in);
 
-        // Command line arguments support: java WaterJugProblem 4 3 2
-        if (args.length >= 3) {
-            try {
-                jug1Cap = Integer.parseInt(args[0]);
-                jug2Cap = Integer.parseInt(args[1]);
-                target = Integer.parseInt(args[2]);
-                System.out.println("Using inputs from command-line arguments:");
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid CLI arguments. Using default textbook problem parameters:");
-            }
-        } else {
-            System.out.println("Running with standard textbook parameters:");
-        }
+        // Simple user input
+        System.out.print("Enter capacity of Jug 1 (liters)       : ");
+        int jug1Cap = scanner.nextInt();
+
+        System.out.print("Enter capacity of Jug 2 (liters)       : ");
+        int jug2Cap = scanner.nextInt();
+
+        System.out.print("Enter target amount to measure (liters): ");
+        int target = scanner.nextInt();
+        System.out.println();
 
         System.out.println("Capacity of Jug 1 : " + jug1Cap + " liters");
         System.out.println("Capacity of Jug 2 : " + jug2Cap + " liters");
@@ -283,12 +278,13 @@ public class WaterJugProblem {
         System.out.println("Solvability Check:");
         System.out.println("  GCD(" + jug1Cap + ", " + jug2Cap + ") = " + g);
         System.out.println("  Target (" + target + ") % GCD (" + g + ") = " + (target % g));
-        if (isSolvable(jug1Cap, jug2Cap, target)) {
-            System.out.println("  Result: Problem is SOLVABLE.\n");
-        } else {
+
+        if (!isSolvable(jug1Cap, jug2Cap, target)) {
             System.out.println("  Result: Problem is NOT SOLVABLE.\n");
+            scanner.close();
             return;
         }
+        System.out.println("  Result: Problem is SOLVABLE.\n");
 
         // Run BFS
         solveBFS(jug1Cap, jug2Cap, target);
@@ -304,5 +300,6 @@ public class WaterJugProblem {
         System.out.println("2. DFS explores one branch deeply, which may yield a longer, sub-optimal path.");
         System.out.println("3. Both algorithms use a visited array to avoid infinite loops and cycles.");
         System.out.println("==================================================================================");
+        scanner.close();
     }
 }

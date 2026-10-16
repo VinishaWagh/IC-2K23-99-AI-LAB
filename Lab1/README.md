@@ -188,10 +188,11 @@ Execution Time  : 1 ms
 # Compile
 javac Lab1/WaterJugProblem.java
 
-# Run standard experiment
+# Run interactively (prompts for Jug 1, Jug 2 capacity and Target)
 java -cp Lab1 WaterJugProblem
 
-# Run with custom parameters (Jug1 Jug2 Target)
+# Run directly with command-line arguments (Jug1 Jug2 Target)
+java -cp Lab1 WaterJugProblem 4 3 2
 java -cp Lab1 WaterJugProblem 5 3 4
 ```
 
