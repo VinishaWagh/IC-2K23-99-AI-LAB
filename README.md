@@ -2,26 +2,27 @@
 
 **Student Name:** Vinisha Wagh  
 **Roll Number:** IC-2K23-99  
-**Course:** IC-709D / IC-703 C | Artificial Intelligence  
+**Course:** IC-709D | Artificial Intelligence  
 **Institute:** International Institute of Professional Studies (IIPS), DAVV Indore  
 
 ---
 
 ## Repository Overview
 
-This repository contains my laboratory assignments, code implementations, outputs, and documentation for the Artificial Intelligence Lab course.
+This repository contains laboratory assignments, clean implementations, outputs, and documentation for the Artificial Intelligence Lab course.
 
-The repository follows the lab manual directory structure:
-- Each laboratory session has its own folder (`Lab1`, `Lab2`, etc.).
-- Each folder contains the source code, output files, and a `README.md` with problem statement, algorithm, and analysis.
+Each laboratory session is organized in its own folder (`Lab1`, `Lab2`, etc.) containing:
+- Source code implementations
+- Output files
+- A `README.md` with problem explanations, algorithms, and step-by-step guides.
 
 ---
 
 ## Lab Index
 
-| Lab | Experiment | Language | Status |
+| Lab | Experiment / Topic | Language | Status |
 |:---:|:---|:---:|:---:|
-| **Lab 1** | [AI Environment Setup & Water Jug Problem](Lab1/) | Java | Completed |
+| **Lab 1** | [Water Jug, Missionaries & Cannibals, Sudoku Solver](Lab1/) | Java | Completed |
 | **Lab 2** | BFS, DFS, Hill Climbing, Best First Search, A* | - | Pending |
 | **Lab 3** | Data Preprocessing, EDA, NumPy, Pandas, Visualization | - | Pending |
 | **Lab 4** | Knowledge Representation, Rule-Based Systems, Semantic Networks | - | Pending |
@@ -36,10 +37,10 @@ The repository follows the lab manual directory structure:
 ```
 IC-2K23-99-AI-LAB/
 ├── Lab1/
-│   ├── WaterJugProblem.java       # Water Jug problem implementation in Java
-│   ├── outputs/
-│   │   └── output.txt             # Console execution output
-│   └── README.md                  # Lab report with algorithm, rules, and analysis
+│   ├── WaterJugProblem.java       # Simplified Water Jug Problem
+│   ├── MissionariesCannibals.java # Simplified Missionaries and Cannibals Problem
+│   ├── SudokuSolver.java          # Clean 9x9 Sudoku Backtracking Solver
+│   └── README.md                  # Beginner-friendly lab explanations & algorithms
 ├── datasets/                      # Datasets used across experiments
 ├── models/                        # Saved models / checkpoints
 ├── docs/                          # Documentation and diagrams
@@ -51,14 +52,18 @@ IC-2K23-99-AI-LAB/
 
 ---
 
-## Running Lab 1 (Water Jug Problem)
-
-To compile and run Lab 1:
+## Running Lab 1 Programs
 
 ```bash
-# Compile
-javac Lab1/WaterJugProblem.java
+# Compile all programs in Lab 1
+javac Lab1/WaterJugProblem.java Lab1/MissionariesCannibals.java Lab1/SudokuSolver.java
 
-# Run (interactively prompts for capacities and target)
+# Run Water Jug Problem
 java -cp Lab1 WaterJugProblem
+
+# Run Missionaries and Cannibals Problem
+java -cp Lab1 MissionariesCannibals
+
+# Run Sudoku Solver
+java -cp Lab1 SudokuSolver
 ```
